@@ -1,38 +1,109 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Trueform – Emotionally intelligent budgeting</title>
-    <meta name="description" content="Trueform is an emotionally intelligent personal finance app that helps you align spending with your values and build better money habits.">
-    <style>
-      body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;padding:48px;line-height:1.6;background:#fafafa;color:#111}
-      .wrap{max-width:760px;margin:0 auto}
-      h1{line-height:1.2;margin:0 0 12px}
-      .card{background:#fff;border:1px solid #eee;border-radius:12px;padding:24px}
-      a{color:#0a66ff;text-decoration:none}
-      a:hover{text-decoration:underline}
-      .muted{color:#666}
-    </style>
-  </head>
-  <body>
-    <div class="wrap">
-      <h1>Trueform</h1>
-      <p class="muted">Emotionally intelligent budgeting &amp; subscriptions.</p>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-      <div class="card">
-        <p><strong>What is Trueform?</strong></p>
-        <p>Trueform is a personal finance app that helps you understand spending patterns, set values‑aligned goals, and
-        manage subscriptions with clarity. Our paid plans are <em>$8/month</em> or <em>$80/year</em> in US dollars.</p>
+  <title>Trueform – Emotionally Intelligent Budgeting</title>
+  <meta name="description" content="Trueform helps you align spending with your values, set goals, and manage subscriptions with clarity. Plans are $8/month or $80/year." />
+  <meta name="keywords" content="budgeting app, personal finance, subscription manager, money habits, values-based budgeting" />
+  <meta name="author" content="Trueform" />
 
-        <p><strong>Who is it for?</strong> Individuals who want calmer, clearer money habits—without shame or overwhelm.</p>
+  <!-- Canonical (swap to your real domain later) -->
+  <link rel="canonical" href="https://chadw24.github.io/trueform-site/">
 
-        <p><strong>Support:</strong> hello@trueform.app</p>
-      </div>
+  <!-- Favicon (add favicon.ico to repo root when you have it) -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-      <p class="muted">© <span id="y"></span> Trueform</p>
-    </div>
-    <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
-  </body>
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Trueform – Emotionally Intelligent Budgeting" />
+  <meta property="og:description" content="Align spending with your values and build better money habits." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://chadw24.github.io/trueform-site/" />
+  <meta property="og:image" content="https://chadw24.github.io/trueform-site/cover.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Simple Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Trueform",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "8",
+      "priceCurrency": "USD"
+    },
+    "description": "Trueform helps you align spending with your values, set goals, and manage subscriptions with clarity."
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg:#fafafa; --card:#fff; --text:#111; --muted:#666; --brand:#0866ff;
+      --max:760px; --radius:12px;
+    }
+    * { box-sizing:border-box; }
+    body{
+      font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      margin:0; padding:48px; color:var(--text); background:var(--bg);
+    }
+    .wrap{ max-width:var(--max); margin:0 auto; }
+    h1{ line-height:1.2; margin:0 0 12px; }
+    .meta{ color:var(--muted); }
+    section{
+      background:var(--card); border:1px solid #eee; border-radius:var(--radius);
+      padding:24px; margin:24px 0;
+    }
+    a{ color:var(--brand); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+    footer{ margin-top:48px; color:var(--muted); text-align:center; font-size:.95em; }
+    @media (max-width: 600px){
+      body{ padding:16px; }
+      .wrap{ width:100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Trueform</h1>
+    <p class="meta">Emotionally intelligent budgeting &amp; subscriptions.</p>
+
+    <section>
+      <p><strong>What is Trueform?</strong></p>
+      <p>
+        Trueform is a personal finance app that helps you understand spending patterns, set
+        values‑aligned goals, and manage subscriptions with clarity. Our paid plans are
+        <em>$8/month</em> or <em>$80/year</em> in US dollars.
+      </p>
+
+      <p><strong>Who is it for?</strong> Individuals who want calmer, clearer money habits—without shame or overwhelm.</p>
+
+      <p><strong>Support:</strong> <a href="mailto:hello@trueform.app">hello@trueform.app</a></p>
+    </section>
+
+    <section>
+      <p><strong>Security & Billing:</strong></p>
+      <ul>
+        <li>Secure checkout with Stripe.</li>
+        <li>Cancel anytime via your billing portal.</li>
+        <li>Automatic receipts and proration for upgrades/downgrades.</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>© <span id="year"></span> Trueform ·
+        <a href="terms.html">Terms</a> ·
+        <a href="privacy.html">Privacy</a> ·
+        <a href="mailto:hello@trueform.app">Contact</a>
+      </p>
+    </footer>
+  </div>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <!-- Optional analytics (drop in later) -->
+  <!-- <script defer src="https://plausible.io/js/script.js" data-domain="yourdomain.com"></script> -->
+</body>
 </html>
-<p><a href="./terms.html">Terms of Service</a> • <a href="./privacy.html">Privacy Policy</a></p>
