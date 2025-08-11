@@ -3,14 +3,35 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Trueform • Privacy Policy</title>
+
+  <title>Privacy Policy – Trueform</title>
+  <meta name="description" content="Trueform Privacy Policy." />
+  <link rel="canonical" href="https://chadw24.github.io/trueform-site/privacy.html">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <meta property="og:title" content="Trueform Privacy Policy" />
+  <meta property="og:description" content="How Trueform collects, uses, and protects your data." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://chadw24.github.io/trueform-site/privacy.html" />
+
   <style>
-    body{font:16px/1.6 -apple-system,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:#fafafa;color:#111;margin:0;padding:32px}
-    .wrap{max-width:760px;margin:0 auto}
-    h1{margin:0 0 8px}
-    .meta{color:#666;margin:0 0 24px}
-    a{color:#0866ff;text-decoration:none} a:hover{text-decoration:underline}
-    section{background:#fff;border:1px solid #eee;border-radius:12px;padding:24px;margin:16px 0}
+    :root { --bg:#fafafa; --card:#fff; --text:#111; --muted:#666; --brand:#0866ff; --max:760px; --radius:12px; }
+    * { box-sizing:border-box; }
+    body{
+      font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      margin:0; padding:48px; color:var(--text); background:var(--bg);
+    }
+    .wrap{ max-width:var(--max); margin:0 auto; }
+    h1{ line-height:1.2; margin:0 0 12px; }
+    .meta{ color:var(--muted); }
+    section{
+      background:var(--card); border:1px solid #eee; border-radius:var(--radius);
+      padding:24px; margin:24px 0;
+    }
+    a{ color:var(--brand); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+    footer{ margin-top:48px; color:var(--muted); text-align:center; font-size:.95em; }
+    @media (max-width: 600px){ body{ padding:16px; } .wrap{ width:100%; } }
   </style>
 </head>
 <body>
@@ -19,54 +40,49 @@
     <p class="meta">Effective: <span id="d"></span></p>
 
     <section>
-      <p>Trueform (“we”, “us”) is a personal finance app. We collect only what we need to operate the service and never sell personal data.</p>
-    </section>
-
-    <section>
-      <h2>Data we process</h2>
+      <h2>What we collect</h2>
       <ul>
-        <li>Account info you provide (name, email).</li>
-        <li>Subscription + billing events handled by Stripe. Payment data is stored by <a href="https://stripe.com">Stripe</a>, not Trueform.</li>
-        <li>App usage metrics (e.g., feature usage) to improve the product.</li>
+        <li>Account info (email) to sign you in and communicate important notices.</li>
+        <li>Subscription/billing info processed by Stripe (we don’t store card numbers).</li>
+        <li>Basic app telemetry to improve reliability (crash/error logs).</li>
       </ul>
     </section>
 
     <section>
       <h2>How we use data</h2>
       <ul>
-        <li>Provide and secure the service.</li>
-        <li>Notify you about important changes.</li>
-        <li>Comply with legal obligations and prevent abuse.</li>
+        <li>To run the service, provide support, and improve features.</li>
+        <li>To send essential emails (receipts, security, service updates).</li>
+        <li>No selling of personal data. No ads based on personal data.</li>
       </ul>
     </section>
 
     <section>
-      <h2>Third parties</h2>
-      <p>We use trusted vendors such as Stripe (payments) and analytics providers. These processors handle data on our behalf under agreements consistent with this policy.</p>
+      <h2>Security</h2>
+      <p>We use industry‑standard security practices and Stripe for payments. Report security issues to <a href="mailto:security@trueform.app">security@trueform.app</a>.</p>
     </section>
 
     <section>
       <h2>Your choices</h2>
       <ul>
-        <li>Access/update your info by contacting support.</li>
-        <li>Request deletion of your account and associated data.</li>
-        <li>Opt out of non‑essential emails at any time.</li>
+        <li>Access/update your info by contacting <a href="mailto:privacy@trueform.app">privacy@trueform.app</a>.</li>
+        <li>Cancel anytime via your billing portal; we retain minimal records for compliance (e.g., invoices).</li>
       </ul>
     </section>
 
     <section>
-      <h2>Data retention & security</h2>
-      <p>We retain account data while your subscription is active and delete it within a reasonable period after closure unless required for legal or tax reasons. We apply industry‑standard security measures and never store full card details.</p>
-    </section>
-
-    <section>
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:privacy@trueform.app">privacy@trueform.app</a><br/>
-         Postal (if needed later): Add your business address here.</p>
+      <p>Questions about privacy? Email <a href="mailto:privacy@trueform.app">privacy@trueform.app</a>.</p>
     </section>
 
-    <p class="meta">Questions? <a href="mailto:hello@trueform.app">hello@trueform.app</a></p>
+    <footer>
+      <p>© <span id="year"></span> Trueform · <a href="index.html">Home</a> · <a href="terms.html">Terms</a></p>
+    </footer>
   </div>
-  <script>document.getElementById('d').textContent=new Date().toISOString().slice(0,10);</script>
+
+  <script>
+    document.getElementById('d').textContent = new Date().toLocaleDateString();
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
