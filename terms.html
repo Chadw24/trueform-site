@@ -3,14 +3,35 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Trueform • Terms of Service</title>
+
+  <title>Terms of Service – Trueform</title>
+  <meta name="description" content="Trueform Terms of Service." />
+  <link rel="canonical" href="https://chadw24.github.io/trueform-site/terms.html">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <meta property="og:title" content="Trueform Terms of Service" />
+  <meta property="og:description" content="Key terms for using Trueform." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://chadw24.github.io/trueform-site/terms.html" />
+
   <style>
-    body{font:16px/1.6 -apple-system,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:#fafafa;color:#111;margin:0;padding:32px}
-    .wrap{max-width:760px;margin:0 auto}
-    h1{margin:0 0 8px}
-    .meta{color:#666;margin:0 0 24px}
-    a{color:#0866ff;text-decoration:none} a:hover{text-decoration:underline}
-    section{background:#fff;border:1px solid #eee;border-radius:12px;padding:24px;margin:16px 0}
+    :root { --bg:#fafafa; --card:#fff; --text:#111; --muted:#666; --brand:#0866ff; --max:760px; --radius:12px; }
+    * { box-sizing:border-box; }
+    body{
+      font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      margin:0; padding:48px; color:var(--text); background:var(--bg);
+    }
+    .wrap{ max-width:var(--max); margin:0 auto; }
+    h1{ line-height:1.2; margin:0 0 12px; }
+    .meta{ color:var(--muted); }
+    section{
+      background:var(--card); border:1px solid #eee; border-radius:var(--radius);
+      padding:24px; margin:24px 0;
+    }
+    a{ color:var(--brand); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+    footer{ margin-top:48px; color:var(--muted); text-align:center; font-size:.95em; }
+    @media (max-width: 600px){ body{ padding:16px; } .wrap{ width:100%; } }
   </style>
 </head>
 <body>
@@ -24,43 +45,51 @@
 
     <section>
       <h2>Accounts</h2>
-      <p>You’re responsible for your account and for keeping your login secure. You must be 13+ (or the age of digital consent in your region).</p>
+      <p>You’re responsible for your account and for keeping your login secure. You must be 18+ to use the service.</p>
     </section>
 
     <section>
-      <h2>Subscriptions & billing</h2>
+      <h2>Subscriptions &amp; Billing</h2>
       <ul>
-        <li>Plans: <strong>$8/month</strong> or <strong>$80/year</strong> (USD).</li>
-        <li>Billing is handled by Stripe. You can cancel anytime; access continues through the paid period.</li>
-        <li>Refunds: We offer pro‑rated refunds for accidental duplicate charges or service issues—email <a href="mailto:billing@trueform.app">billing@trueform.app</a>.</li>
+        <li><strong>Plans:</strong> $8/month or $80/year (USD).</li>
+        <li><strong>Billing:</strong> Handled by Stripe. You can cancel anytime; access continues through the paid period.</li>
+        <li><strong>Refunds:</strong> We offer pro‑rated refunds for accidental duplicate charges or service issues—email <a href="mailto:billing@trueform.app">billing@trueform.app</a>.</li>
       </ul>
     </section>
 
     <section>
-      <h2>Acceptable use</h2>
-      <p>Don’t attempt to abuse, reverse engineer, or disrupt the service. We may suspend accounts that violate these terms or applicable law.</p>
+      <h2>Acceptable Use</h2>
+      <p>Don’t misuse the service (e.g., illegal activity, attempts to breach security, scraping at scale, or disrupting others).</p>
+    </section>
+
+    <section>
+      <h2>Data &amp; Privacy</h2>
+      <p>We respect your privacy. See our <a href="privacy.html">Privacy Policy</a> for what we collect and why.</p>
+    </section>
+
+    <section>
+      <h2>Termination</h2>
+      <p>We may suspend or terminate accounts that violate these Terms. You may cancel anytime in your billing portal.</p>
     </section>
 
     <section>
       <h2>Disclaimers</h2>
-      <p>Trueform provides general budgeting tools and is not financial, legal, or tax advice.</p>
-    </section>
-
-    <section>
-      <h2>Limitation of liability</h2>
-      <p>To the maximum extent permitted by law, Trueform is not liable for indirect or consequential losses.</p>
-    </section>
-
-    <section>
-      <h2>Changes</h2>
-      <p>We may update these Terms. Material changes will be announced via the product or email.</p>
+      <p>Trueform is provided “as‑is” without warranties. We’re not a financial advisor. Use at your own discretion.</p>
     </section>
 
     <section>
       <h2>Contact</h2>
-      <p><a href="mailto:legal@trueform.app">legal@trueform.app</a></p>
+      <p>Questions about these Terms? Email <a href="mailto:legal@trueform.app">legal@trueform.app</a>.</p>
     </section>
+
+    <footer>
+      <p>© <span id="year"></span> Trueform · <a href="index.html">Home</a> · <a href="privacy.html">Privacy</a></p>
+    </footer>
   </div>
-  <script>document.getElementById('d').textContent=new Date().toISOString().slice(0,10);</script>
+
+  <script>
+    document.getElementById('d').textContent = new Date().toLocaleDateString();
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
