@@ -1,0 +1,9 @@
+/* TEAM */
+Developer: Chad Wiatrowski
+Contact: hello@trueform.app
+From: Mooresville, NC, USA
+
+/* SITE */
+Last update: 2025-08-11
+Standards: HTML5, CSS3
+Components: Hosted on GitHub Pages
