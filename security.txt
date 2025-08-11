@@ -1,0 +1,4 @@
+Contact: mailto:security@trueform.app
+Expires: 2030-01-01T00:00:00Z
+Policy: https://YOUR-DOMAIN/security
+Preferred-Languages: en
