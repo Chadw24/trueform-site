@@ -1,102 +1,85 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trueform — Emotionally Intelligent Budgeting</title>
-  <meta name="description" content="Trueform is a personal finance app for calmer, clearer money habits—without shame or overwhelm." />
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <base href="./">
-
+  <meta name="description" content="Trueform - Your money has a story. Let’s rewrite it.">
+  <title>Trueform</title>
   <style>
     body {
-      font: 16px/1.6 -apple-system, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f5f5f5;
+      background: #f4f4f4;
       color: #333;
     }
-    .wrap {
-      max-width: 760px;
-      margin: auto;
-      padding: 24px;
+    header {
+      background: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
     }
-    h1, h2 {
-      margin: 0 0 16px;
-    }
-    .meta {
-      color: #666;
-      margin: 0 0 24px;
-    }
-    a {
-      color: #0866ff;
+    nav a {
+      color: #fff;
+      margin: 0 10px;
       text-decoration: none;
+      font-weight: bold;
     }
-    a:hover {
+    nav a:hover {
       text-decoration: underline;
     }
-    header, footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 16px 24px;
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
       background: #fff;
-      border-bottom: 1px solid #eee;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #222;
     }
     footer {
-      border-top: 1px solid #eee;
-      border-bottom: none;
-      margin-top: 48px;
-    }
-    section {
-      background: #fff;
-      border: 1px solid #eee;
-      border-radius: 12px;
-      padding: 24px;
-    }
-    .btn {
-      display: inline-block;
-      padding: 10px 16px;
-      background: #0866ff;
+      text-align: center;
+      padding: 15px;
+      background: #222;
       color: #fff;
-      border-radius: 6px;
-      font-weight: 600;
+      margin-top: 30px;
     }
-    .btn:hover {
-      background: #005ae0;
+    .cta {
+      display: inline-block;
+      padding: 12px 20px;
+      background: #007bff;
+      color: white;
+      border-radius: 4px;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+    .cta:hover {
+      background: #0056b3;
     }
   </style>
 </head>
 <body>
-
-<header>
-  <strong><a href="index.html" style="text-decoration:none;color:inherit;">Trueform</a></strong>
-  <nav>
-    <a href="privacy.html">Privacy</a>
-    &nbsp;|&nbsp;
-    <a href="terms.html">Terms</a>
-  </nav>
-</header>
-
-<div class="wrap">
-  <h1>Trueform</h1>
-  <p class="meta">Emotionally intelligent budgeting & subscriptions.</p>
-
-  <section>
-    <h2>What is Trueform?</h2>
-    <p>A personal finance app that helps you understand spending patterns, set values-aligned goals, and manage subscriptions with clarity.</p>
-
-    <p><strong>Pricing:</strong> $8/month or $80/year (USD).</p>
-
-    <p><strong>Who is it for?</strong> People who want calmer, clearer money habits—without shame or overwhelm.</p>
-
-    <a href="mailto:hello@trueform.app" class="btn">Get in touch</a>
-  </section>
-</div>
-
-<footer>
-  <small>© 2025 Trueform • <a href="privacy.html">Privacy</a> • <a href="terms.html">Terms</a></small>
-</footer>
-
+  <header>
+    <h1>Trueform</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="mailto:support@trueform.com">Get in Touch</a>
+    </nav>
+  </header>
+  <main>
+    <h2>Your money has a story. Let’s rewrite it.</h2>
+    <p>Trueform is the first emotionally intelligent finance app designed to meet you where you are. We help you budget, plan, and grow with a personalized approach rooted in behavioral science and emotional health.</p>
+    <p>Whether you’re just getting started or ready to take your financial life to the next level, Trueform adapts to your unique personality and goals.</p>
+    <a href="mailto:support@trueform.com" class="cta">Get in Touch</a>
+  </main>
+  <footer>
+    &copy; <span id="year"></span> Trueform. All rights reserved.
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
